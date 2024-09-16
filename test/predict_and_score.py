@@ -53,12 +53,12 @@ if __name__ == '__main__':
     ROOT_DIR = '.' if os.path.exists('config') else '..' 
 
 
-    # logger.info("Choose test file: ")
-    # dir_path = os.path.join(ROOT_DIR, 'dataset')
+    logger.info("Choose test file: ")
+    dir_path = os.path.join(ROOT_DIR, 'dataset')
+    file = user_select('^(test|train).local.csv$', dir_path)
     # file = user_select('^test(.)+csv$', dir_path)
-    # logger.info(file)
-
-    file = 'test.local.csv'
+    logger.info(file)
+    # file = 'test.local.csv'
 
     logger.info(f"Load test data")
     test_csv = os.path.join(ROOT_DIR, 'dataset', file)
